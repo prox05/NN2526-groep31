@@ -3,4 +3,4 @@
 ## Group Members:
 - Sabih Syed          -   15611175
 - Yousri Nait Aicha   -   14651440
-- Trayvaun palmer     -
+- Trayvaun palmer     -   14654164
