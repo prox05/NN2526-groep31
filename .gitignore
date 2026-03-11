@@ -1,1 +1,6 @@
 Data/
+.venv/
+__pycache__/
+*.pyc
+artifacts/
+submissions/
