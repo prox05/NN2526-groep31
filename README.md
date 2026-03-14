@@ -7,7 +7,7 @@
 
 ## Assignment Setup (Food Classification)
 This repo now includes a complete baseline pipeline:
-- `src/train.py`: trains a ResNet18 classifier on `Data/train_set/...`
+- `src/train.py`: trains a ResNet50 classifier on `Data/train_set/...`
 - `src/predict.py`: loads the best checkpoint and creates submission CSV (`img_name,label`)
 
 The scripts already handle your nested dataset folders:

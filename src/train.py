@@ -16,9 +16,9 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 
 try:
-    from torchvision.models import ResNet18_Weights
+    from torchvision.models import ResNet50_Weights
 except Exception:
-    ResNet18_Weights = None
+    ResNet50_Weights = None
 
 
 @dataclass
@@ -102,14 +102,14 @@ def split_records(records: list[Record], val_ratio: float, seed: int) -> tuple[l
 
 
 def build_model(num_classes: int, try_pretrained: bool) -> nn.Module:
-    if try_pretrained and ResNet18_Weights is not None:
+    if try_pretrained and ResNet50_Weights is not None:
         try:
-            model = models.resnet18(weights=ResNet18_Weights.DEFAULT)
+            model = models.resnet50(weights=ResNet50_Weights.DEFAULT)
         except Exception as exc:
             print(f"Could not load pretrained weights ({exc}); using random init.")
-            model = models.resnet18(weights=None)
+            model = models.resnet50(weights=None)
     else:
-        model = models.resnet18(weights=None)
+        model = models.resnet50(weights=None)
 
     in_features = model.fc.in_features
     model.fc = nn.Linear(in_features, num_classes)

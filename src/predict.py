@@ -69,7 +69,7 @@ def load_model(checkpoint_path: Path, num_classes: int) -> tuple[torch.nn.Module
     ckpt_classes = int(ckpt.get("num_classes", num_classes))
     image_size = int(ckpt.get("image_size", 224))
 
-    model = models.resnet18(weights=None)
+    model = models.resnet50(weights=None)
     in_features = model.fc.in_features
     model.fc = torch.nn.Linear(in_features, ckpt_classes)
     model.load_state_dict(ckpt["model_state_dict"])
