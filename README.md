@@ -1,9 +1,9 @@
 # NN2526-groep31
 
 ## Group Members
-- Sabih Syed - 15611175
-- Yousri Nait Aicha - 14651440
-- Trayvaun Palmer - 14654164
+- Sabih Syed 
+- Yousri Nait Aicha
+- Trayvaun Palmer 
 
 ## Assignment Setup (Food Classification)
 This repo now includes a complete baseline pipeline:
